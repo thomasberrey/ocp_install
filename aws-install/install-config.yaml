@@ -1,0 +1,35 @@
+apiVersion: v1
+baseDomain: some.domain
+compute:
+- architecture: amd64
+  hyperthreading: Enabled
+  name: worker
+  platform:
+    aws:
+      type: t2.xlarge
+  replicas: 2
+controlPlane:
+  architecture: amd64
+  hyperthreading: Enabled
+  name: master
+  platform:
+    aws:
+      type: t2.xlarge
+  replicas: 2
+metadata:
+  creationTimestamp: null
+  name: cluster-name
+networking:
+  clusterNetwork:
+  - cidr: 10.128.0.0/14
+    hostPrefix: 23
+  machineNetwork:
+  - cidr: 10.0.0.0/16
+  networkType: OpenShiftSDN
+  serviceNetwork:
+  - 172.30.0.0/16
+platform:
+  aws:
+    region: us-west-1
+publish: External
+pullSecret: 'some.secret'
