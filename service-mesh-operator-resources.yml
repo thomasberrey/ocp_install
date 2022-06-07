@@ -45,3 +45,14 @@ items:
       name: kiali-ossm
       source: redhat-operators
       sourceNamespace: openshift-marketplace
+  - apiVersion: operators.coreos.com/v1alpha1
+    kind: Subscription
+    metadata:
+      name: servicemesh-operator
+      namespace: servicemesh-operators
+    spec:
+      channel: stable
+      installPlanApproval: Automatic
+      name: servicemeshoperator
+      source: redhat-operators
+      sourceNamespace: openshift-marketplace
