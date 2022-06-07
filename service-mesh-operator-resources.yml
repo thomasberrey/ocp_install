@@ -18,7 +18,7 @@ items:
       name: elasticsearch-operator
       namespace: servicemesh-operators
     spec:
-      channel: "stable"
+      channel: stable
       installPlanApproval: Automatic
       name: elasticsearch-operator
       source: redhat-operators
@@ -29,8 +29,19 @@ items:
       name: jaeger-operator
       namespace: servicemesh-operators
     spec:
-      channel: "stable"
+      channel: stable
       installPlanApproval: Automatic
       name: jaeger-product
+      source: redhat-operators
+      sourceNamespace: openshift-marketplace
+  - apiVersion: operators.coreos.com/v1alpha1
+    kind: Subscription
+    metadata:
+      name: kiali-operator
+      namespace: servicemesh-operators
+    spec:
+      channel: stable
+      installPlanApproval: Automatic
+      name: kiali-ossm
       source: redhat-operators
       sourceNamespace: openshift-marketplace
