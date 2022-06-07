@@ -11,7 +11,9 @@ items:
     metadata:
       name: sso
       namespace: sso
-    spec: {}
+    spec:
+      targetNamespaces:
+      - sso
   - apiVersion: operators.coreos.com/v1alpha1
     kind: Subscription
     metadata:
