@@ -17,3 +17,6 @@ do
   oc apply -f service-mesh-control-plane.yml
   status=$?
 done
+
+# Create Service Mesh Member Roll
+oc apply -f service-mesh-member-roll.yml
