@@ -1,0 +1,16 @@
+apiVersion: mirror.openshift.io/v1alpha1
+kind: ImageSetConfiguration
+mirror:
+  ocp:
+  operators:
+    - catalog: registry.redhat.io/redhat/redhat-operator-index:v4.9
+      headsonly: false
+      packages:
+        - name: cluster-logging
+        - name: odf-operator
+        - name: compliance-operator
+        - name: kiali-ossm
+        - name: jaeger-product
+        - name: servicemeshoperator
+        - name: elasticsearch-operator
+        - name: rhsso-operator
