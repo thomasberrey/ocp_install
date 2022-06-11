@@ -7,10 +7,8 @@ mirror:
       headsonly: false
       packages:
         - name: cluster-logging
-        - name: odf-operator
         - name: compliance-operator
-        - name: kiali-ossm
-        - name: jaeger-product
         - name: servicemeshoperator
-        - name: elasticsearch-operator
+        - name: jaeger-product
+        - name: kiali-ossm
         - name: rhsso-operator
