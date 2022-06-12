@@ -1,3 +1,3 @@
 #!/bin/bash
 
-oc-mirror --config imageset-config.yml file://output-dir
+./oc-mirror --config imageset-config.yml file://output-dir
