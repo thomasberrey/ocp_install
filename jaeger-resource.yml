@@ -7,7 +7,7 @@ spec:
   storage:
     type: elasticsearch
     elasticsearch:
-      nodeCount: 1
+      nodeCount: 3
       storage:
         size: 5Gi
       resources:
