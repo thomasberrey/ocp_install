@@ -5,6 +5,7 @@ oc apply -f service-mesh-operator-resources.yml
 
 # Create the istio-system project
 oc new-project istio-system
+oc project istio-system
 
 # Create Service Mesh Control Plane
 oc apply -f service-mesh-control-plane.yml
