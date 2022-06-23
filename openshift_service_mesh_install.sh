@@ -21,6 +21,3 @@ done
 
 # Create Service Mesh Member Roll
 oc apply -f service-mesh-member-roll.yml
-
-# Create Jaeger, Elasticsearch and Persistent Storage Resources
-oc apply -f jaeger-resource.yml
