@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Install Elasticsearch, Jaeger, Kiali and Service Mesh Operators
+# Install Service Mesh Operator
 oc apply -f service-mesh-operator-resources.yml
 
 # Create the istio-system project

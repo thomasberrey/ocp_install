@@ -5,21 +5,21 @@ items:
   - apiVersion: v1
     kind: Namespace
     metadata:
-      name: servicemesh-operators
+      name: jaeger-operators
   - apiVersion: operators.coreos.com/v1
     kind: OperatorGroup
     metadata:
-      name: servicemesh-operators
-      namespace: servicemesh-operators
+      name: jaeger-operators
+      namespace: jaeger-operators
     spec: {}
   - apiVersion: operators.coreos.com/v1alpha1
     kind: Subscription
     metadata:
-      name: servicemesh-operator
-      namespace: servicemesh-operators
+      name: jaeger-operator
+      namespace: jaeger-operators
     spec:
       channel: stable
       installPlanApproval: Automatic
-      name: servicemeshoperator
+      name: jaeger-product
       source: redhat-operators
       sourceNamespace: openshift-marketplace
