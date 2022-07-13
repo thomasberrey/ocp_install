@@ -2,8 +2,7 @@
 
 OCP_VERSION=4.10.14
 
-mkdir temp
-cd temp
+cd /tmp
 
 wget https://mirror.openshift.com/pub/openshift-v4/clients/ocp/$OCP_VERSION/openshift-install-linux-$OCP_VERSION.tar.gz
 wget https://mirror.openshift.com/pub/openshift-v4/clients/ocp/$OCP_VERSION/openshift-client-linux-$OCP_VERSION.tar.gz
