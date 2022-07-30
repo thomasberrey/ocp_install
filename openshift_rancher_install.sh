@@ -5,6 +5,7 @@ RANCHER_URL=`grep "Access the OpenShift web-console here:" imis/.openshift_insta
 
 helm repo add rancher-latest https://releases.rancher.com/server-charts/latest
 
+oc delete project rancher
 oc new-project rancher
 
 kubectl apply -f https://github.com/jetstack/cert-manager/releases/download/v1.5.1/cert-manager.crds.yaml
