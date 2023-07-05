@@ -32,4 +32,4 @@ platform:
   aws:
     region: us-west-1
 publish: External
-pullSecret: 'some.secret'
+pullSecret: '{"auths":{"xxxxxxx": {"auth": "xxxxxx","email": "xxxxxx"}}}'
