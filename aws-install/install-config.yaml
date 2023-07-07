@@ -8,7 +8,7 @@ compute:
   name: worker
   platform:
     aws:
-      type: m5.xlarge
+      type: m5.2xlarge
   replicas: 2
 controlPlane:
   architecture: amd64
@@ -16,7 +16,7 @@ controlPlane:
   name: master
   platform:
     aws:
-      type: m5.xlarge
+      type: m5.2xlarge
   replicas: 2
 metadata:
   creationTimestamp: null
