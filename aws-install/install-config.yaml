@@ -8,16 +8,16 @@ compute:
   name: worker
   platform:
     aws:
-      type: t2.2xlarge
-  replicas: 3
+      type: m5.xlarge
+  replicas: 2
 controlPlane:
   architecture: amd64
   hyperthreading: Enabled
   name: master
   platform:
     aws:
-      type: t2.2xlarge
-  replicas: 3
+      type: m5.xlarge
+  replicas: 2
 metadata:
   creationTimestamp: null
   name: cluster-name
