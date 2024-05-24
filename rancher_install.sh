@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Install Rancher
-AWS_REGION=`cat ~/.aws/config | grep region | awk '{print $3}'`
+AWS_REGION=`cat ~/.aws/credentials | grep region | sed 's/region=//g'`
 AWS_ZONE="$AWS_REGION"a
 INSTANCE_TYPE=t3a.medium
-AWS_ACCESS_KEY_ID=`cat ~/.aws/credentials | grep aws_access_key_id | awk '{print $3}'`
-AWS_SECRET_ACCESS_KEY=`cat ~/.aws/credentials | grep aws_secret_access_key | awk '{print $3}' | sed 's/\//\\\\\//g'`
+AWS_ACCESS_KEY_ID=`cat ~/.aws/credentials | grep aws_access_key_id | sed 's/aws_access_key_id=//g'`
+AWS_SECRET_ACCESS_KEY=`cat ~/.aws/credentials | grep aws_secret_access_key | sed 's/aws_secret_access_key=//g'`
 RANCHER_SERVER_ADMIN_PASSWORD=adminpassword
 
 rm -rf quickstart
