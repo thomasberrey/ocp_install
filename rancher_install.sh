@@ -4,8 +4,6 @@
 AWS_REGION=`cat ~/.aws/credentials | grep region | sed 's/region=//g'`
 AWS_ZONE="$AWS_REGION"a
 INSTANCE_TYPE=t3a.medium
-AWS_ACCESS_KEY_ID=`cat ~/.aws/credentials | grep aws_access_key_id | sed 's/aws_access_key_id=//g'`
-AWS_SECRET_ACCESS_KEY=`cat ~/.aws/credentials | grep aws_secret_access_key | sed 's/aws_secret_access_key=//g'`
 RANCHER_SERVER_ADMIN_PASSWORD=adminpassword
 
 rm -rf quickstart
@@ -18,8 +16,6 @@ cp terraform.tfvars.example terraform.tfvars
 sed -i "s/aws_region = .*/aws_region = \"$AWS_REGION\"/g" terraform.tfvars
 sed -i "s/aws_zone = .*/aws_zone = \"$AWS_ZONE\"/g" terraform.tfvars
 sed -i "s/instance_type = .*/instance_type = \"$INSTANCE_TYPE\"/g" terraform.tfvars
-sed -i "s/aws_access_key = .*/aws_access_key = \"$AWS_ACCESS_KEY_ID\"/g" terraform.tfvars
-sed -i "s/aws_secret_key = .*/aws_secret_key = \"$AWS_SECRET_ACCESS_KEY\"/g" terraform.tfvars
 sed -i "s/rancher_server_admin_password = .*/rancher_server_admin_password = \"$RANCHER_SERVER_ADMIN_PASSWORD\"/g" terraform.tfvars
 cat terraform.tfvars
 
